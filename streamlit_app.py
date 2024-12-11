@@ -63,9 +63,24 @@ elif st.session_state.page == "Variable Analysis":
     
     # Diccionario que mapea combinaciones a rutas de gráficos
     graficos = {
-        ("Profitability (> 0 ROI)", "Budget"): "graficos/Budget1.png",
-        ("Success (> 1.5 ROI)", "Budget"): "graficos/Budget.png",
-        # Añade más combinaciones según tus gráficos
+        ("Profitability (> 0 ROI)", "Budget"): "graficos2/Budget1.png",
+        ("Success (> 1.5 ROI)", "Budget"): "graficos2/Budget.png",
+        ("Profitability (> 0 ROI)", "Creative Type"): "graficos2/Creative Type1.png",
+        ("Success (> 1.5 ROI)", "Creative Type"): "graficos2/Creative Type.png",
+        ("Profitability (> 0 ROI)", "Distributor Type"): "graficos2/Distributor Type1.png",
+        ("Success (> 1.5 ROI)", "Distributor Type"): "graficos2/Distributor Type.png",
+        ("Profitability (> 0 ROI)", "Franchise"): "graficos2/Franchise1.png",
+        ("Success (> 1.5 ROI)", "Franchise"): "graficos2/Franchise.png",
+        ("Profitability (> 0 ROI)", "Genre"): "graficos2/Genre1.png",
+        ("Success (> 1.5 ROI)", "Genre"): "graficos2/Genre.png",
+        ("Profitability (> 0 ROI)", "Month"): "graficos2/Month1.png",
+        ("Success (> 1.5 ROI)", "Month"): "graficos2/Month.png",
+        ("Profitability (> 0 ROI)", "Mpaa Rating"): "graficos2/Mpaa Rating1.png",
+        ("Success (> 1.5 ROI)", "Mpaa Rating"): "graficos2/Mpaa Rating.png",
+        ("Profitability (> 0 ROI)", "Release Year"): "graficos2/Release Year1.png",
+        ("Success (> 1.5 ROI)", "Release Year"): "graficos2/Release Year.png",
+        ("Profitability (> 0 ROI)", "Running Time"): "graficos2/Running Time1.png",
+        ("Success (> 1.5 ROI)", "Running Time"): "graficos2/Running Time.png",
     }
     
     # Obtener la ruta del gráfico según la selección
