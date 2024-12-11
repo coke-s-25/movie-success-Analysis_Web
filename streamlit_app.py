@@ -57,6 +57,27 @@ elif st.session_state.page == "Variable Analysis":
         </div>
     """, unsafe_allow_html=True)
     st.write("Contenido de análisis sobre variables...")
+    # Crear los dos dropdowns
+    opcion1 = st.selectbox("Seleccione la primera opción:", ["Opción A", "Opción B", "Opción C"])
+    opcion2 = st.selectbox("Seleccione la segunda opción:", ["Opción 1", "Opción 2", "Opción 3"])
+    
+    # Diccionario que mapea combinaciones a rutas de gráficos
+    graficos = {
+        ("Opción A", "Opción 1"): "graficos/grafico_A1.png",
+        ("Opción A", "Opción 2"): "graficos/grafico_A2.png",
+        ("Opción B", "Opción 3"): "graficos/grafico_B3.png",
+        # Añade más combinaciones según tus gráficos
+    }
+    
+    # Obtener la ruta del gráfico según la selección
+    grafico_path = graficos.get((opcion1, opcion2))
+    
+    # Mostrar el gráfico seleccionado
+    if grafico_path:
+        st.image(grafico_path, caption=f"Gráfico para {opcion1} y {opcion2}", use_column_width=True)
+    else:
+        st.write("No hay gráfico disponible para esta combinación.")
+    
 
 elif st.session_state.page == "Success Prediction":
     st.title("Success Prediction")
