@@ -59,7 +59,7 @@ if st.session_state.page == "Home":
 elif st.session_state.page == "Variable Analysis":
     st.markdown("""
         <div class="title">
-            Variable Analysis & Box Office Success Trends
+            Variable Analysis & Box Office Trends
         </div>
     """, unsafe_allow_html=True)
     
