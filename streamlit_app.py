@@ -48,7 +48,10 @@ if st.session_state.page == "Home":
     # Contenido de la página Home
     st.write("")
     st.write("")
-    st.write("Welcome to the home page! Here you can navigate to different analyses.")
+    st.write("")
+    st.write("Sources:")
+    st.markdown("[The Nummbers](https://www.the-numbers.com/)")
+    st.image("graficos2/Creative Type.png",  use_container_width=True )
 
 elif st.session_state.page == "Variable Analysis":
     st.markdown("""
@@ -88,7 +91,7 @@ elif st.session_state.page == "Variable Analysis":
     
     # Mostrar el gráfico seleccionado
     if grafico_path:
-        st.image(grafico_path, caption=f"Gráfico para {opcion1} y {opcion2}",  use_container_width=True )
+        st.image(grafico_path,  use_container_width=True )
     else:
         st.write("No hay gráfico disponible para esta combinación.")
     
