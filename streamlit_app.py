@@ -100,6 +100,10 @@ elif st.session_state.page == "Variable Analysis":
     
 
 elif st.session_state.page == "Success Prediction":
-    st.title("Success Prediction")
-    st.write("Contenido de predicción de éxito...")
+    st.markdown("""
+        <div class="title">
+            Movie Predictions
+        </div>
+    """, unsafe_allow_html=True)
+     opcion1 = st.selectbox("What movie do you wnat to study?", ["Profitability (> 0 ROI)", "Success (> 1.5 ROI)"])
 
