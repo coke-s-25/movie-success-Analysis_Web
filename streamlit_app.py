@@ -54,7 +54,7 @@ if st.session_state.page == "Home":
     st.image("graficos2/The Numbers.png",  width=300 )
     st.write("")
     st.markdown("[IMDb](https://www.imdb.com/es/)")
-    st.image("graficos2/IMDb.png",  width=300 )
+    st.image("graficos2/IMDb.png",  width=200 )
 
 elif st.session_state.page == "Variable Analysis":
     st.markdown("""
