@@ -20,7 +20,7 @@ st.markdown("""
 st.sidebar.title("Navigation")
 home_button = st.sidebar.button("Home")
 variable_analysis_button = st.sidebar.button("Variable Analysis")
-success_prediction_button = st.sidebar.button("Success Prediction")
+success_prediction_button = st.sidebar.button("Movie Predictions")
 
 # Usar una variable de estado para mantener la página activa
 if 'page' not in st.session_state:
@@ -105,5 +105,5 @@ elif st.session_state.page == "Success Prediction":
             Movie Predictions
         </div>
     """, unsafe_allow_html=True)
-    opcion1 = st.selectbox("What movie do you wnat to study?", ["Profitability (> 0 ROI)", "Success (> 1.5 ROI)"])
+    opcion1 = st.selectbox("What movie do you want to study?", ["Profitability (> 0 ROI)", "Success (> 1.5 ROI)"])
 
