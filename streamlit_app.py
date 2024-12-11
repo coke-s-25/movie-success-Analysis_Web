@@ -58,8 +58,8 @@ elif st.session_state.page == "Variable Analysis":
     """, unsafe_allow_html=True)
     
     # Crear los dos dropdowns
-    opcion1 = st.selectbox("What to study?:", ["Profitability (> 0 ROI)", "Success (> 1.5 ROI)"])
-    opcion2 = st.selectbox("What variable", ["Budget","Creative Type","Distributor Type","Franchise","Genre","Month","Mpaa Rating","Release Year","Running Time"])
+    opcion1 = st.selectbox("What to study?", ["Profitability (> 0 ROI)", "Success (> 1.5 ROI)"])
+    opcion2 = st.selectbox("What variable?", ["Budget","Creative Type","Distributor Type","Franchise","Genre","Month","Mpaa Rating","Release Year","Running Time"])
     
     # Diccionario que mapea combinaciones a rutas de gráficos
     graficos = {
@@ -73,7 +73,7 @@ elif st.session_state.page == "Variable Analysis":
     
     # Mostrar el gráfico seleccionado
     if grafico_path:
-        st.image(grafico_path, caption=f"Gráfico para {opcion1} y {opcion2}", use_container_width=True)
+        st.image(grafico_path, caption=f"Gráfico para {opcion1} y {opcion2}",  width=500 )
     else:
         st.write("No hay gráfico disponible para esta combinación.")
     
