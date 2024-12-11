@@ -63,8 +63,8 @@ elif st.session_state.page == "Variable Analysis":
     
     # Diccionario que mapea combinaciones a rutas de gráficos
     graficos = {
-        ("Opción A", "Opción 1"): "graficos/grafico_A1.png",
-        ("Opción A", "Opción 2"): "graficos/grafico_A2.png",
+        ("Opción A", "Opción 1"): "graficos/Budget.png",
+        ("Opción A", "Opción 2"): "graficos/Budget1.png",
         ("Opción B", "Opción 3"): "graficos/grafico_B3.png",
         # Añade más combinaciones según tus gráficos
     }
