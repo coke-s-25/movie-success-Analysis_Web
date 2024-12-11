@@ -51,10 +51,10 @@ if st.session_state.page == "Home":
     st.write("")
     st.write("Sources:")
     st.markdown("[The Numbers](https://www.the-numbers.com/)")
-    st.image("graficos2/The Numbers.png",  use_container_width=True )
+    st.image("graficos2/The Numbers.png",  width=300 )
     st.write("")
     st.markdown("[IMDb](https://www.imdb.com/es/)")
-    st.image("graficos2/IMDb.png",  use_container_width=True )
+    st.image("graficos2/IMDb.png",  width=300 )
 
 elif st.session_state.page == "Variable Analysis":
     st.markdown("""
