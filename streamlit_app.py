@@ -56,16 +56,15 @@ elif st.session_state.page == "Variable Analysis":
             Variable Analysis & Box Office Success Trends
         </div>
     """, unsafe_allow_html=True)
-    st.write("Contenido de análisis sobre variables...")
+    
     # Crear los dos dropdowns
-    opcion1 = st.selectbox("Seleccione la primera opción:", ["Opción A", "Opción B", "Opción C"])
-    opcion2 = st.selectbox("Seleccione la segunda opción:", ["Opción 1", "Opción 2", "Opción 3"])
+    opcion1 = st.selectbox("What to study?:", ["Profitability (> 0 ROI)", "Success (> 1.5 ROI)"])
+    opcion2 = st.selectbox("What variable", ["Budget","Creative Type","Distributor Type","Franchise","Genre","Month","Mpaa Rating","Release Year","Running Time"])
     
     # Diccionario que mapea combinaciones a rutas de gráficos
     graficos = {
-        ("Opción A", "Opción 1"): "graficos/Budget.png",
-        ("Opción A", "Opción 2"): "graficos/Budget1.png",
-        ("Opción B", "Opción 3"): "graficos/grafico_B3.png",
+        ("Profitability (> 0 ROI)", "Budget"): "graficos/Budget1.png",
+        ("Success (> 1.5 ROI)", "Budget"): "graficos/Budget.png",
         # Añade más combinaciones según tus gráficos
     }
     
