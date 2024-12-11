@@ -105,5 +105,5 @@ elif st.session_state.page == "Success Prediction":
             Movie Predictions
         </div>
     """, unsafe_allow_html=True)
-     opcion1 = st.selectbox("What movie do you wnat to study?", ["Profitability (> 0 ROI)", "Success (> 1.5 ROI)"])
+    opcion1 = st.selectbox("What movie do you wnat to study?", ["Profitability (> 0 ROI)", "Success (> 1.5 ROI)"])
 
