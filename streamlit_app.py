@@ -73,7 +73,7 @@ elif st.session_state.page == "Variable Analysis":
     
     # Mostrar el gráfico seleccionado
     if grafico_path:
-        st.image(grafico_path, caption=f"Gráfico para {opcion1} y {opcion2}",  width=700 )
+        st.image(grafico_path, caption=f"Gráfico para {opcion1} y {opcion2}",  use_container_width=True )
     else:
         st.write("No hay gráfico disponible para esta combinación.")
     
