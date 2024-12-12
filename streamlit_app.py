@@ -127,6 +127,7 @@ elif st.session_state.page == "Success Prediction":
         keys = list(pelicula_info.keys())
         for key, value in pelicula_info.items():
             if key == keys[-1]:  # Si es la última variable
+                formatted_value = f"{value:,.0f}".replace(",", ".")
                 st.markdown(f"""
                     <div style="
                         background-color: #d4edda; 
