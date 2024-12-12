@@ -128,6 +128,8 @@ elif st.session_state.page == "Success Prediction":
         for idx, (key, value) in enumerate(pelicula_info.items()):
             if idx == 0:  # Saltar el primer valor
                 continue
+            if isinstance(value, pd.Timestamp):  # Si es una fecha
+                value = value.strftime("%Y-%m-%d")  # Formatear la fecha
             if key == keys[-1]:  # Si es la última variable
                 # Formatear el número con puntos
                 formatted_value = f"{value:,.0f}".replace(",", ".")
