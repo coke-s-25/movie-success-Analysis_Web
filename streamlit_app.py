@@ -1,3 +1,5 @@
+import streamlit as st
+import pandas as pd
 
 # Estilo para el título y el subtítulo
 st.markdown("""
