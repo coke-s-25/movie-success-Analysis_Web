@@ -125,8 +125,11 @@ elif st.session_state.page == "Success Prediction":
         # Mostrar la información en Streamlit
         st.subheader(f"Information about {opcion1}:")
         keys = list(pelicula_info.keys())
-        for key, value in pelicula_info.items():
+        for idx, (key, value) in enumerate(pelicula_info.items()):
+            if idx == 0:  # Saltar el primer valor
+                continue
             if key == keys[-1]:  # Si es la última variable
+                # Formatear el número con puntos
                 formatted_value = f"{value:,.0f}".replace(",", ".")
                 st.markdown(f"""
                     <div style="
