@@ -1,5 +1,5 @@
 import streamlit as st
-
+import pandas as pd
 # Estilo para el título y el subtítulo
 st.markdown("""
     <style>
@@ -100,14 +100,35 @@ elif st.session_state.page == "Variable Analysis":
     
 
 elif st.session_state.page == "Success Prediction":
-    st.markdown("""
-        <div class="title">
-            Movie Predictions
-        </div>
-    """, unsafe_allow_html=True)
-    st.write("")
-    st.write("")
-    st.write("About our model:")
-    st.image("graficos2/predictions_variables.png",  use_container_width=True )
-    opcion1 = st.selectbox("What movie do you want to study?", ["Profitability (> 0 ROI)", "Success (> 1.5 ROI)"])
+import streamlit as st
+import pandas as pd
+
+# Leer el archivo .xlsx
+df = pd.read_excel('2024_movies.xlsx')
+
+# Interfaz de usuario
+st.markdown("""
+    <div class="title">
+        Movie Predictions
+    </div>
+""", unsafe_allow_html=True)
+st.write("")
+st.write("About our model:")
+st.image("graficos2/predictions_variables.png", use_container_width=True)
+
+# Opciones para el selectbox
+opcion1 = st.selectbox("What movie do you want to study?", df['movie_name'].unique())
+
+# Mostrar la información de la película seleccionada
+if opcion1:
+    # Filtrar por la película seleccionada
+    pelicula_info = df[df['movie_name'] == opcion1].iloc[0].to_dict()
+
+    # Mostrar la información en Streamlit
+    st.subheader(f"Information about {opcion1}:")
+    for key, value in pelicula_info.items():
+        st.write(f"**{key}:** {value}")
+
+
+
 
