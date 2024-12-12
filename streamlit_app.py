@@ -108,6 +108,6 @@ elif st.session_state.page == "Success Prediction":
     st.write("")
     st.write("")
     st.write("About our model:")
-    st.image("graficos2/predictions_variables,  use_container_width=True )
+    st.image("graficos2/predictions_variables",  use_container_width=True )
     opcion1 = st.selectbox("What movie do you want to study?", ["Profitability (> 0 ROI)", "Success (> 1.5 ROI)"])
 
