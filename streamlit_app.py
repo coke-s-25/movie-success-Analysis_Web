@@ -137,7 +137,7 @@ elif st.session_state.page == "Success Prediction":
                         text-align: center; 
                         font-size: 24px; 
                         color: #155724;">
-                        <strong>{key}:</strong> {value}
+                        <strong>{key}:</strong> {formatted_value}
                     </div>
                 """, unsafe_allow_html=True)
             else:
