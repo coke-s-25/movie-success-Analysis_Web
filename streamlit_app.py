@@ -124,8 +124,23 @@ elif st.session_state.page == "Success Prediction":
 
         # Mostrar la información en Streamlit
         st.subheader(f"Information about {opcion1}:")
+        keys = list(pelicula_info.keys())
         for key, value in pelicula_info.items():
-            st.write(f"**{key}:** {value}")
+            if key == keys[-1]:  # Si es la última variable
+                st.markdown(f"""
+                    <div style="
+                        background-color: #d4edda; 
+                        border: 1px solid #c3e6cb; 
+                        border-radius: 5px; 
+                        padding: 10px; 
+                        text-align: center; 
+                        font-size: 24px; 
+                        color: #155724;">
+                        <strong>{key}:</strong> {value}
+                    </div>
+                """, unsafe_allow_html=True)
+            else:
+                st.write(f"**{key}:** {value}")
 
 
 
